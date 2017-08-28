@@ -3,9 +3,10 @@ import java.util.Random;
 
 class Cycle{
 
-    public void ride(){System.out.println("Cycle.ride");}
-    public void push(){System.out.println("Cycle.push");}
-    public void what(){}
+    public void ride(){System.out.println("Cycle.ride()");}
+    public void push(){System.out.println("Cycle.push()");}
+    public void what(){System.out.println(new Cycle().getClass().toString());}
+    //public void balance(){System.out.println("balance");}
 }
 
 class Unicycle extends Cycle {
@@ -16,6 +17,7 @@ class Unicycle extends Cycle {
     public void what(){
         System.out.println(new Unicycle().getClass().toString());
     }
+    public void balance(){ }
 }
 
 class Bicycle extends Cycle {
@@ -26,6 +28,7 @@ class Bicycle extends Cycle {
     public void what(){
         System.out.println(new Bicycle().getClass().toString());
     }
+    public void balance(){}
 }
 class Motrobike extends Bicycle{
     public void ride(){System.out.println("Motrobike.ride()");}
